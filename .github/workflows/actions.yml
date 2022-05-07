@@ -1,0 +1,16 @@
+name: Actions
+
+on: workflow_dispatch
+
+jobs:
+  cache:
+    environment: production
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/cache@v2
+        with:
+          path: cache
+          key: cache_key
+      - run: |
+          cat cache
