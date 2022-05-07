@@ -11,6 +11,6 @@ jobs:
       - uses: actions/cache@v2
         with:
           path: cache
-          key: cache_key
+          key: my_cache_key
       - run: |
           cat cache
